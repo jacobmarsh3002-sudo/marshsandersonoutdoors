@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Project Portfolio | Fencing & Landscaping</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config for Custom Colors/Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f2fbf5',
+                            100: '#e1f6e8',
+                            200: '#c4ebd4',
+                            300: '#98daba',
+                            400: '#64c19a',
+                            500: '#40a47d',
+                            600: '#2f8363',
+                            700: '#276850',
+                            800: '#225341',
+                            900: '#1d4436',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for elements Tailwind doesn't cover natively out-of-the-box perfectly */
+        .hero-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <span class="font-bold text-xl text-white tracking-tight" id="nav-brand">Sanderson & Marsh</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-100 hover:text-brand-400 font-medium transition-colors">Home</a>
+                    <a href="#about" class="text-gray-100 hover:text-brand-400 font-medium transition-colors">About Us</a>
+                    <a href="#services" class="text-gray-100 hover:text-brand-400 font-medium transition-colors">Services</a>
+                    <a href="#portfolio" class="text-gray-100 hover:text-brand-400 font-medium transition-colors">Portfolio</a>
+                    <a href="#contact" class="bg-brand-600 hover:bg-brand-500 text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Free Estimate</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-400 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-xl absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#home" class="block px-3 py-3 text-gray-800 hover:bg-brand-50 hover:text-brand-600 rounded-md font-medium">Home</a>
+                <a href="#about" class="block px-3 py-3 text-gray-800 hover:bg-brand-50 hover:text-brand-600 rounded-md font-medium">About Us</a>
+                <a href="#services" class="block px-3 py-3 text-gray-800 hover:bg-brand-50 hover:text-brand-600 rounded-md font-medium">Services</a>
+                <a href="#portfolio" class="block px-3 py-3 text-gray-800 hover:bg-brand-50 hover:text-brand-600 rounded-md font-medium">Portfolio</a>
+                <a href="#contact" class="block px-3 py-3 mt-4 text-center bg-brand-600 text-white rounded-md font-medium">Free Estimate</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-bg min-h-screen flex items-center relative pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-500/20 border border-brand-400/30 text-brand-300 font-semibold text-sm mb-6 uppercase tracking-wider backdrop-blur-sm">
+                    Premium Property Improvements
+                </span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                    Outdoor Spaces <br>
+                    <span class="text-brand-400">Built to Last.</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+                    Expert fencing, landscaping, and carpentry services by a local team. We deliver reliable service, honest communication, and results you can be proud of.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-brand-600 hover:bg-brand-500 text-white text-center px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-brand-500/30 flex items-center justify-center gap-2">
+                        Get a Free Estimate <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#portfolio" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 text-center px-8 py-4 rounded-lg font-semibold text-lg transition-all backdrop-blur-sm">
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Wave Graphic -->
+        <div class="absolute bottom-0 w-full overflow-hidden leading-none">
+            <svg class="relative block w-full h-[50px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,121.3,201.39,107.5Z" class="fill-gray-50"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden shadow-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Carpentry and Fence Construction" class="object-cover w-full h-full rounded-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl max-w-xs border border-gray-100 hidden md:block">
+                        <div class="flex items-center gap-4 mb-2">
+                            <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-hammer"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Hands-on Experience</h4>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600">Specializing in carpentry and landscaping projects.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">About Us</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Local expertise you can trust.</h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        We are a local team with hands-on experience in both landscaping and carpentry. Having worked on a variety of outdoor construction and property improvement projects, we've developed a strong foundation in craftsmanship, attention to detail, and customer service.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        From custom fence installations and gates to lawn care and outdoor enhancements, we take pride in delivering quality work that is built to last. Our goal is simple: provide reliable service, honest communication, and results that homeowners can be proud of.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 border-t border-gray-200">
+                        <div>
+                            <div class="font-bold text-gray-900">Quinton Sanderson</div>
+                            <div class="text-sm text-brand-600 font-medium mt-1"><i class="fa-solid fa-phone mr-1"></i> (778) 245-8808</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">Heath Sanderson</div>
+                            <div class="text-sm text-brand-600 font-medium mt-1"><i class="fa-solid fa-phone mr-1"></i> (778) 928-0343</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900">Jacob Marsh</div>
+                            <div class="text-sm text-brand-600 font-medium mt-1"><i class="fa-solid fa-phone mr-1"></i> (604) 838-3595</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">Our Services</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Complete Outdoor Solutions</h3>
+                <p class="text-lg text-gray-600">We handle everything from foundational construction to the finishing landscaping touches.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Fence Construction</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Custom fences, privacy fences, repairs, and full replacements. Built to secure your property and enhance curb appeal.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Lawn Maintenance</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        Comprehensive care including mowing, trimming, edging, and seasonal cleanup to keep your yard looking pristine year-round.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-brand-600 text-2xl mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-3">Property Improvements</h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        General outdoor projects and landscaping enhancements designed to maximize the beauty and utility of your outdoor space.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-brand-900 text-white relative">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-brand-400 font-semibold tracking-wide uppercase text-sm mb-2">Our Portfolio</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-4">Recent Projects</h3>
+                    <p class="text-lg text-gray-300">Take a look at some of our recent fence construction and outdoor improvement projects.</p>
+                </div>
+                <a href="#contact" class="hidden md:inline-block border border-white/30 hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-colors">
+                    Start Your Project
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Project 01 -->
+                <div class="bg-brand-800 rounded-2xl overflow-hidden shadow-2xl border border-brand-700 group flex flex-col h-full">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Screenshot 2026-06-23 200045.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1584483758110-388f8d951915?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';" alt="Modern Composite Privacy Fence" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                            Project 01
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white">Modern Composite Privacy Fence</h4>
+                        </div>
+                        
+                        <div class="flex gap-4 mb-6 text-sm text-brand-200 border-b border-brand-700 pb-4">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> Burnaby, BC</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> Spring 2026</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-tag"></i> Construction</span>
+                        </div>
+
+                        <div class="mb-2">
+                            <h5 class="text-brand-400 font-semibold mb-3">Scope of Work:</h5>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-brand-400 mt-1 text-sm"></i>
+                                    <span>Removal of old privacy wall</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-brand-400 mt-1 text-sm"></i>
+                                    <span>Installed new wooden support posts</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-brand-400 mt-1 text-sm"></i>
+                                    <span>Installed horizontal composite privacy fence panels</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-brand-400 mt-1 text-sm"></i>
+                                    <span>Ensured level alignment and consistent spacing</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-brand-400 mt-1 text-sm"></i>
+                                    <span>Completed site cleanup & quality inspection</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="bg-brand-800 rounded-2xl overflow-hidden shadow-2xl border border-brand-700 group flex flex-col h-full">
+                    <div class="relative h-72 overflow-hidden">
+                        <img src="Screenshot 2026-06-23 200107.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1602052577122-f73b9710adba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';" alt="Custom Vertical Slat Cedar Fence" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                            Project 02
+                        </div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white">Custom Vertical Slat Cedar Fence & Gate</h4>
+                        </div>
+                        
+                        <div class="flex gap-4 mb-6 text-sm text-brand-200 border-b border-brand-700 pb-4 flex-wrap">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot"></i> Burnaby, BC</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-regular fa-calendar"></i> Summer 2025</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-tag"></i> Construction</span>
+                        </div>
+
+                        <div class="mb-2">
+                            <h5 class="text-brand-400 font-semibold mb-3">Scope of Work:</h5>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-brand-400 mt-1 text-sm"></i>
+                                    <span>Removed existing fence & excavated new post holes</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-brand-400 mt-1 text-sm"></i>
+                                    <span>Installed support posts secured with expanding concrete</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-brand-400 mt-1 text-sm"></i>
+                                    <span>Installed horizontal rails and structural framing</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-brand-400 mt-1 text-sm"></i>
+                                    <span>Constructed custom vertical cedar slat fencing & matching gate</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-brand-400 mt-1 text-sm"></i>
+                                    <span>Leveling, aligning, final cleanup, and site restoration</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                <div class="grid grid-cols-1 lg:grid-cols-5">
+                    
+                    <!-- Contact Info Panel -->
+                    <div class="lg:col-span-2 bg-brand-800 text-white p-10 lg:p-12 relative overflow-hidden">
+                        <!-- Decorative circle -->
+                        <div class="absolute -right-16 -top-16 w-64 h-64 bg-brand-700 rounded-full opacity-50"></div>
+                        <div class="absolute -left-16 -bottom-16 w-48 h-48 bg-brand-900 rounded-full opacity-50"></div>
+                        
+                        <div class="relative z-10 h-full flex flex-col">
+                            <h3 class="text-3xl font-bold mb-2">Get a Free Estimate</h3>
+                            <p class="text-brand-200 mb-10">Reach out to our team directly. We're ready to discuss your next outdoor project.</p>
+                            
+                            <div class="space-y-8 flex-grow">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-brand-700 flex items-center justify-center shrink-0 mt-1">
+                                        <i class="fa-solid fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-brand-300 font-medium uppercase tracking-wider mb-1">Direct Lines</p>
+                                        <div class="space-y-3">
+                                            <div>
+                                                <p class="font-semibold">Quinton Sanderson</p>
+                                                <a href="tel:7782458808" class="text-xl hover:text-brand-300 transition-colors">(778) 245-8808</a>
+                                            </div>
+                                            <div>
+                                                <p class="font-semibold">Heath Sanderson</p>
+                                                <a href="tel:7789280343" class="text-xl hover:text-brand-300 transition-colors">(778) 928-0343</a>
+                                            </div>
+                                            <div>
+                                                <p class="font-semibold">Jacob Marsh</p>
+                                                <a href="tel:6048383595" class="text-xl hover:text-brand-300 transition-colors">(604) 838-3595</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start gap-4">
+                                    <div class="w-10 h-10 rounded-full bg-brand-700 flex items-center justify-center shrink-0 mt-1">
+                                        <i class="fa-solid fa-map-location-dot"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-brand-300 font-medium uppercase tracking-wider mb-1">Service Area</p>
+                                        <p class="text-lg">Burnaby, BC & Surrounding Areas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Panel -->
+                    <div class="lg:col-span-3 p-10 lg:p-12">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
+                        <form id="contactForm" class="space-y-6" onsubmit="event.preventDefault(); showMessage();">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                    <input type="text" id="firstName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="John" required>
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                    <input type="text" id="lastName" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="Doe">
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="(555) 000-0000" required>
+                                </div>
+                                <div>
+                                    <label for="serviceType" class="block text-sm font-medium text-gray-700 mb-1">Project Type</label>
+                                    <select id="serviceType" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all bg-white">
+                                        <option value="fence">Fence Construction</option>
+                                        <option value="lawn">Lawn Maintenance</option>
+                                        <option value="improvement">Property Improvement</option>
+                                        <option value="other">Other / Not Sure</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Project Details</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all resize-none" placeholder="Tell us a bit about what you're looking for..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 px-8 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                                Request Free Estimate
+                            </button>
+                            
+                            <!-- Success Message Placeholder -->
+                            <div id="formSuccess" class="hidden bg-green-50 text-green-800 border border-green-200 rounded-lg p-4 mt-4 text-center">
+                                <i class="fa-solid fa-circle-check mr-2"></i> Thank you! Your message has been sent. We'll be in touch shortly.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded bg-gray-800 flex items-center justify-center text-brand-500">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <span class="font-bold text-xl text-white tracking-tight">Sanderson & Marsh</span>
+                </div>
+                
+                <div class="text-sm">
+                    &copy; <span id="year"></span> Sanderson & Marsh Outdoor Projects. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        const navBrand = document.getElementById('nav-brand');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-panel', 'shadow-md');
+                navbar.classList.remove('py-2');
+                // Change text colors for light background
+                navBrand.classList.remove('text-white');
+                navBrand.classList.add('text-gray-900');
+                
+                // Desktop links
+                const desktopLinks = navbar.querySelectorAll('.hidden.md\\:flex > a:not(.bg-brand-600)');
+                desktopLinks.forEach(link => {
+                    link.classList.remove('text-gray-100');
+                    link.classList.add('text-gray-700');
+                });
+                
+                // Mobile button
+                btn.classList.remove('text-white');
+                btn.classList.add('text-gray-800');
+            } else {
+                navbar.classList.remove('glass-panel', 'shadow-md');
+                
+                // Revert text colors
+                navBrand.classList.add('text-white');
+                navBrand.classList.remove('text-gray-900');
+                
+                // Desktop links
+                const desktopLinks = navbar.querySelectorAll('.hidden.md\\:flex > a:not(.bg-brand-600)');
+                desktopLinks.forEach(link => {
+                    link.classList.add('text-gray-100');
+                    link.classList.remove('text-gray-700');
+                });
+                
+                // Mobile button
+                btn.classList.add('text-white');
+                btn.classList.remove('text-gray-800');
+            }
+        });
+
+        // Simple Form Submission Simulation
+        function showMessage() {
+            const btn = document.querySelector('button[type="submit"]');
+            const successMsg = document.getElementById('formSuccess');
+            
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.style.display = 'none';
+                successMsg.classList.remove('hidden');
+                document.getElementById('contactForm').reset();
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
