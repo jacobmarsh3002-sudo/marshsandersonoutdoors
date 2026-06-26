@@ -52,6 +52,16 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
         }
+
+        /* Project Carousel */
+        .carousel-track {
+            transition: transform 0.5s ease-out;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800 antialiased bg-gray-50">
@@ -243,10 +253,36 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <!-- Project 01 -->
-                <div class="bg-brand-800 rounded-2xl overflow-hidden shadow-2xl border border-brand-700 group flex flex-col h-full">
-                    <div class="relative h-72 overflow-hidden">
-                        <img src="Screenshot 2026-06-23 200045.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1584483758110-388f8d951915?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';" alt="Modern Composite Privacy Fence" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                <div class="bg-brand-800 rounded-2xl overflow-hidden shadow-2xl border border-brand-700 flex flex-col h-full">
+                    <div class="project-carousel relative h-72 overflow-hidden group">
+                        <div class="carousel-track flex h-full">
+                            <div class="carousel-slide w-full h-full flex-shrink-0">
+                                <img src="Screenshot 2026-06-23 200045.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1584483758110-388f8d951915?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';" alt="Modern Composite Privacy Fence - photo 1">
+                            </div>
+                            <div class="carousel-slide w-full h-full flex-shrink-0">
+                                <img src="Screenshot 2026-06-23 200045-2.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1588047979213-20323304740b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';" alt="Modern Composite Privacy Fence - photo 2">
+                            </div>
+                            <div class="carousel-slide w-full h-full flex-shrink-0">
+                                <img src="Screenshot 2026-06-23 200045-3.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1604015641586-6fa03629f976?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';" alt="Modern Composite Privacy Fence - photo 3">
+                            </div>
+                        </div>
+
+                        <!-- Arrows -->
+                        <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20" aria-label="Previous photo">
+                            <i class="fa-solid fa-chevron-left text-sm"></i>
+                        </button>
+                        <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20" aria-label="Next photo">
+                            <i class="fa-solid fa-chevron-right text-sm"></i>
+                        </button>
+
+                        <!-- Dots -->
+                        <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                            <button class="w-2 h-2 rounded-full bg-white transition-colors" aria-label="Go to photo 1"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/40 transition-colors" aria-label="Go to photo 2"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/40 transition-colors" aria-label="Go to photo 3"></button>
+                        </div>
+
+                        <div class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide z-20">
                             Project 01
                         </div>
                     </div>
@@ -290,10 +326,36 @@
                 </div>
 
                 <!-- Project 02 -->
-                <div class="bg-brand-800 rounded-2xl overflow-hidden shadow-2xl border border-brand-700 group flex flex-col h-full">
-                    <div class="relative h-72 overflow-hidden">
-                        <img src="Screenshot 2026-06-23 200107.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1602052577122-f73b9710adba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';" alt="Custom Vertical Slat Cedar Fence" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                <div class="bg-brand-800 rounded-2xl overflow-hidden shadow-2xl border border-brand-700 flex flex-col h-full">
+                    <div class="project-carousel relative h-72 overflow-hidden group">
+                        <div class="carousel-track flex h-full">
+                            <div class="carousel-slide w-full h-full flex-shrink-0">
+                                <img src="Screenshot 2026-06-23 200107.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1602052577122-f73b9710adba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';" alt="Custom Vertical Slat Cedar Fence - photo 1">
+                            </div>
+                            <div class="carousel-slide w-full h-full flex-shrink-0">
+                                <img src="Screenshot 2026-06-23 200107-2.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1584225064281-429e7fce4961?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';" alt="Custom Vertical Slat Cedar Fence - photo 2">
+                            </div>
+                            <div class="carousel-slide w-full h-full flex-shrink-0">
+                                <img src="Screenshot 2026-06-23 200107-3.png" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1593285247650-cd7bb44adcfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';" alt="Custom Vertical Slat Cedar Fence - photo 3">
+                            </div>
+                        </div>
+
+                        <!-- Arrows -->
+                        <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20" aria-label="Previous photo">
+                            <i class="fa-solid fa-chevron-left text-sm"></i>
+                        </button>
+                        <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20" aria-label="Next photo">
+                            <i class="fa-solid fa-chevron-right text-sm"></i>
+                        </button>
+
+                        <!-- Dots -->
+                        <div class="carousel-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                            <button class="w-2 h-2 rounded-full bg-white transition-colors" aria-label="Go to photo 1"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/40 transition-colors" aria-label="Go to photo 2"></button>
+                            <button class="w-2 h-2 rounded-full bg-white/40 transition-colors" aria-label="Go to photo 3"></button>
+                        </div>
+
+                        <div class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide z-20">
                             Project 02
                         </div>
                     </div>
@@ -537,6 +599,63 @@
                 document.getElementById('contactForm').reset();
             }, 1000);
         }
+
+        // Project Photo Carousels
+        function initProjectCarousels() {
+            document.querySelectorAll('.project-carousel').forEach((carousel) => {
+                const track = carousel.querySelector('.carousel-track');
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                const dots = carousel.querySelectorAll('.carousel-dots button');
+                const prevBtn = carousel.querySelector('.carousel-prev');
+                const nextBtn = carousel.querySelector('.carousel-next');
+                const total = slides.length;
+                let index = 0;
+                let autoplayId = null;
+
+                function goTo(i) {
+                    index = (i + total) % total;
+                    track.style.transform = `translateX(-${index * 100}%)`;
+                    dots.forEach((dot, di) => {
+                        dot.classList.toggle('bg-white', di === index);
+                        dot.classList.toggle('bg-white/40', di !== index);
+                    });
+                }
+
+                function startAutoplay() {
+                    stopAutoplay();
+                    autoplayId = setInterval(() => goTo(index + 1), 6000);
+                }
+                function stopAutoplay() {
+                    if (autoplayId) clearInterval(autoplayId);
+                }
+
+                prevBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    goTo(index - 1);
+                    startAutoplay();
+                });
+                nextBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    goTo(index + 1);
+                    startAutoplay();
+                });
+                dots.forEach((dot, di) => {
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        goTo(di);
+                        startAutoplay();
+                    });
+                });
+
+                carousel.addEventListener('mouseenter', stopAutoplay);
+                carousel.addEventListener('mouseleave', startAutoplay);
+
+                goTo(0);
+                startAutoplay();
+            });
+        }
+
+        initProjectCarousels();
     </script>
 </body>
 </html>
