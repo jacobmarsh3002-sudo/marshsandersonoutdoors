@@ -330,15 +330,19 @@
                      images/project3-before-2.png  images/project3-after-2.png
                      images/project3-before-3.png  images/project3-after-3.png
                      images/project3-before-4.png  images/project3-after-4.png  -->
+               <!-- Project 03 — Before/After Drag Slider -->
                 <div class="bg-brand-800 rounded-2xl overflow-hidden shadow-2xl border border-brand-700 flex flex-col lg:col-span-2">
                     <div class="ba-carousel-wrapper relative overflow-hidden" style="height:480px;">
 
+                        <!-- Pair 1 -->
                         <div class="ba-pair absolute inset-0">
-                            <div class="ba-container w-full h-full relative overflow-hidden" style="cursor:ew-resize;user-select:none;">
-                                <img class="ba-before-img block w-full h-full object-cover" src="images/project3-before-1.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80';" alt="Before 1">
-                                <div class="ba-after-clip absolute inset-y-0 left-0 overflow-hidden" style="width:50%">
-                                    <img class="ba-after-img absolute inset-y-0 left-0 h-full object-cover max-w-none" src="images/project3-after-1.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1593285247650-cd7bb44adcfd?w=1200&q=80';" alt="After 1">
-                                </div>
+                            <div class="ba-container w-full h-full relative overflow-hidden bg-gray-900" style="cursor:ew-resize;user-select:none;">
+                                <!-- AFTER image (Base layer, full width) -->
+                                <img class="block absolute inset-0 w-full h-full object-cover" src="images/project3-after-1.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1593285247650-cd7bb44adcfd?w=1200&q=80';" alt="After 1">
+                                
+                                <!-- BEFORE image (Top layer, clipped to 50%) -->
+                                <img class="ba-slider-img absolute inset-0 w-full h-full object-cover" src="images/project3-before-1.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80';" alt="Before 1" style="clip-path: inset(0 50% 0 0);">
+                                
                                 <div class="ba-handle-line absolute inset-y-0 pointer-events-none z-10" style="left:50%;transform:translateX(-50%);width:3px;background:rgba(255,255,255,0.95);">
                                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-2xl flex items-center justify-center ring-2 ring-white/50">
                                         <i class="fa-solid fa-arrows-left-right text-brand-700 text-sm"></i>
@@ -349,12 +353,11 @@
                             </div>
                         </div>
 
+                        <!-- Pair 2 -->
                         <div class="ba-pair absolute inset-0 hidden">
-                            <div class="ba-container w-full h-full relative overflow-hidden" style="cursor:ew-resize;user-select:none;">
-                                <img class="ba-before-img block w-full h-full object-cover" src="images/project3-before-2.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80';" alt="Before 2">
-                                <div class="ba-after-clip absolute inset-y-0 left-0 overflow-hidden" style="width:50%">
-                                    <img class="ba-after-img absolute inset-y-0 left-0 h-full object-cover max-w-none" src="images/project3-after-2.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1593285247650-cd7bb44adcfd?w=1200&q=80';" alt="After 2">
-                                </div>
+                            <div class="ba-container w-full h-full relative overflow-hidden bg-gray-900" style="cursor:ew-resize;user-select:none;">
+                                <img class="block absolute inset-0 w-full h-full object-cover" src="images/project3-after-2.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1593285247650-cd7bb44adcfd?w=1200&q=80';" alt="After 2">
+                                <img class="ba-slider-img absolute inset-0 w-full h-full object-cover" src="images/project3-before-2.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80';" alt="Before 2" style="clip-path: inset(0 50% 0 0);">
                                 <div class="ba-handle-line absolute inset-y-0 pointer-events-none z-10" style="left:50%;transform:translateX(-50%);width:3px;background:rgba(255,255,255,0.95);">
                                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-2xl flex items-center justify-center ring-2 ring-white/50">
                                         <i class="fa-solid fa-arrows-left-right text-brand-700 text-sm"></i>
@@ -365,12 +368,11 @@
                             </div>
                         </div>
 
+                        <!-- Pair 3 -->
                         <div class="ba-pair absolute inset-0 hidden">
-                            <div class="ba-container w-full h-full relative overflow-hidden" style="cursor:ew-resize;user-select:none;">
-                                <img class="ba-before-img block w-full h-full object-cover" src="images/project3-before-3.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80';" alt="Before 3">
-                                <div class="ba-after-clip absolute inset-y-0 left-0 overflow-hidden" style="width:50%">
-                                    <img class="ba-after-img absolute inset-y-0 left-0 h-full object-cover max-w-none" src="images/project3-after-3.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1593285247650-cd7bb44adcfd?w=1200&q=80';" alt="After 3">
-                                </div>
+                            <div class="ba-container w-full h-full relative overflow-hidden bg-gray-900" style="cursor:ew-resize;user-select:none;">
+                                <img class="block absolute inset-0 w-full h-full object-cover" src="images/project3-after-3.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1593285247650-cd7bb44adcfd?w=1200&q=80';" alt="After 3">
+                                <img class="ba-slider-img absolute inset-0 w-full h-full object-cover" src="images/project3-before-3.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80';" alt="Before 3" style="clip-path: inset(0 50% 0 0);">
                                 <div class="ba-handle-line absolute inset-y-0 pointer-events-none z-10" style="left:50%;transform:translateX(-50%);width:3px;background:rgba(255,255,255,0.95);">
                                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-2xl flex items-center justify-center ring-2 ring-white/50">
                                         <i class="fa-solid fa-arrows-left-right text-brand-700 text-sm"></i>
@@ -381,12 +383,11 @@
                             </div>
                         </div>
 
+                        <!-- Pair 4 -->
                         <div class="ba-pair absolute inset-0 hidden">
-                            <div class="ba-container w-full h-full relative overflow-hidden" style="cursor:ew-resize;user-select:none;">
-                                <img class="ba-before-img block w-full h-full object-cover" src="images/project3-before-4.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80';" alt="Before 4">
-                                <div class="ba-after-clip absolute inset-y-0 left-0 overflow-hidden" style="width:50%">
-                                    <img class="ba-after-img absolute inset-y-0 left-0 h-full object-cover max-w-none" src="images/project3-after-4.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1593285247650-cd7bb44adcfd?w=1200&q=80';" alt="After 4">
-                                </div>
+                            <div class="ba-container w-full h-full relative overflow-hidden bg-gray-900" style="cursor:ew-resize;user-select:none;">
+                                <img class="block absolute inset-0 w-full h-full object-cover" src="images/project3-after-4.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1593285247650-cd7bb44adcfd?w=1200&q=80';" alt="After 4">
+                                <img class="ba-slider-img absolute inset-0 w-full h-full object-cover" src="images/project3-before-4.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80';" alt="Before 4" style="clip-path: inset(0 50% 0 0);">
                                 <div class="ba-handle-line absolute inset-y-0 pointer-events-none z-10" style="left:50%;transform:translateX(-50%);width:3px;background:rgba(255,255,255,0.95);">
                                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-2xl flex items-center justify-center ring-2 ring-white/50">
                                         <i class="fa-solid fa-arrows-left-right text-brand-700 text-sm"></i>
@@ -397,8 +398,10 @@
                             </div>
                         </div>
 
+                        <!-- Project badge -->
                         <div class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide z-30">Project 03</div>
 
+                        <!-- Prev / Next -->
                         <button class="ba-prev absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 text-white flex items-center justify-center z-30">
                             <i class="fa-solid fa-chevron-left text-sm"></i>
                         </button>
@@ -406,6 +409,7 @@
                             <i class="fa-solid fa-chevron-right text-sm"></i>
                         </button>
 
+                        <!-- Dots -->
                         <div class="ba-dots absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-30">
                             <button class="w-2 h-2 rounded-full bg-white transition-colors"></button>
                             <button class="w-2 h-2 rounded-full bg-white/40 transition-colors"></button>
@@ -414,6 +418,7 @@
                         </div>
                     </div>
 
+                    <!-- Edit the title, date, tags, and scope below to match your project -->
                     <div class="p-8 flex-grow flex flex-col">
                         <h4 class="text-2xl font-bold text-white mb-4">Fence Restoration</h4>
                         <div class="flex gap-4 mb-6 text-sm text-brand-200 border-b border-brand-700 pb-4 flex-wrap">
@@ -672,6 +677,29 @@
             window.addEventListener('touchend',      () => { dragging = false; });
         });
 
+       // ── Before/After Drag Sliders ──────────────────────────────────────
+        document.querySelectorAll('.ba-container').forEach(container => {
+            const sliderImg = container.querySelector('.ba-slider-img');
+            const handle    = container.querySelector('.ba-handle-line');
+            let dragging = false;
+
+            function setPos(clientX) {
+                const rect = container.getBoundingClientRect();
+                const pct  = Math.max(2, Math.min(98, ((clientX - rect.left) / rect.width) * 100));
+                // clipPath hides the right side of the top image without squishing it
+                sliderImg.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+                handle.style.left      = pct + '%';
+            }
+
+            container.addEventListener('mousedown',  e => { dragging = true;  setPos(e.clientX); });
+            window.addEventListener('mousemove',     e => { if (dragging) setPos(e.clientX); });
+            window.addEventListener('mouseup',       () => { dragging = false; });
+
+            container.addEventListener('touchstart', e => { dragging = true;  setPos(e.touches[0].clientX); }, { passive: true });
+            window.addEventListener('touchmove',     e => { if (dragging) setPos(e.touches[0].clientX); },    { passive: true });
+            window.addEventListener('touchend',      () => { dragging = false; });
+        });
+
         // ── Before/After Pair Navigation ──────────────────────────────────
         document.querySelectorAll('.ba-carousel-wrapper').forEach(wrapper => {
             const pairs   = wrapper.querySelectorAll('.ba-pair');
@@ -684,11 +712,10 @@
                 current = (i + pairs.length) % pairs.length;
                 pairs[current].classList.remove('hidden');
                 dots[current].classList.replace('bg-white/40', 'bg-white');
-                // Sync after-image width for newly visible pair
+                
+                // Reset slider position to center for newly visible pair
                 const con = pairs[current].querySelector('.ba-container');
-                con.querySelector('.ba-after-img').style.width = con.offsetWidth + 'px';
-                // Reset handle to centre
-                con.querySelector('.ba-after-clip').style.width  = '50%';
+                con.querySelector('.ba-slider-img').style.clipPath = 'inset(0 50% 0 0)';
                 con.querySelector('.ba-handle-line').style.left   = '50%';
             }
 
@@ -696,6 +723,3 @@
             wrapper.querySelector('.ba-next').addEventListener('click', e => { e.stopPropagation(); showPair(current + 1); });
             dots.forEach((dot, di) => dot.addEventListener('click', e => { e.stopPropagation(); showPair(di); }));
         });
-    </script>
-</body>
-</html>
